@@ -1,0 +1,10 @@
+---
+- name: this playbook create a file or dir
+  hosts: all
+  # become: true  #if I comment here then when it excute it excute as ansadmin 
+  tasks:
+   - name: creating a file 
+     file:
+       path: /home/ansadmin/dir1
+       state: directory # if i need to remove file then i need to give absent option 
+

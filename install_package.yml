@@ -1,0 +1,10 @@
+---
+- name: install packages 
+  hosts: all
+  become: true 
+  tasks:
+   - name: install package 
+     yum:
+       name: ['git' , 'make', 'wget', 'gzip'] 
+       state: installed 
+
